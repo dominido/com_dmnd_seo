@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<extension type="component" version="3.4" method="upgrade">
+
+	<name>COM_DMND_SEO</name>
+	<creationDate>July 2016</creationDate>
+	<author>Valeriy Kuzmenko</author>
+	<authorEmail>valerianzp@gmail.com</authorEmail>
+	<authorUrl>http://dominido.com</authorUrl>
+	<version>1.0</version>
+
+	<description>COM_DMND_SEO_DESCRIPTION</description>
+
+	<files folder="site">
+
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+
+		<filename>dmnd_seo.php</filename>
+		<filename>controller.php</filename>
+		
+	</files>
+
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_dmnd_seo.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.com_dmnd_seo.ini</language>
+	</languages>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">
+				sql/install.mysql.utf8.sql
+			</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">
+				sql/uninstall.mysql.utf8.sql
+			</file>
+		</sql>
+	</uninstall>
+
+
+	<administration>
+
+		<menu link="index.php?option=com_dmnd_seo">COM_DMND_SEO</menu>
+
+		<files folder="admin">
+			
+			<folder>views</folder>
+			<folder>models</folder>
+			<folder>controllers</folder>
+			<folder>language</folder>
+			<folder>tables</folder>
+			<folder>sql</folder>
+			<folder>helpers</folder>
+
+			<filename>dmnd_seo.php</filename>
+			<filename>controller.php</filename>
+
+		</files>
+
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_dmnd_seo.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_dmnd_seo.sys.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_dmnd_seo.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_dmnd_seo.sys.ini</language>
+		</languages>
+		
+	</administration>
+
+</extension>
